@@ -155,42 +155,6 @@ body{
 }
 
 /* =========================
-   投票数
-========================= */
-
-.vote{
-    margin-top:24px;
-
-    font-family:'Panda';
-
-    font-size:42px;
-
-    color:#ffffff;
-
-    background:
-    linear-gradient(
-        135deg,
-        #ffb5c9,
-        #ff8fb0
-    );
-
-    padding:
-    14px 36px;
-
-    border-radius:999px;
-
-    border:6px solid #fff;
-
-    box-shadow:
-    0 10px 25px rgba(255,143,176,0.28);
-
-    letter-spacing:3px;
-
-    animation:
-    fadeUp 1.4s ease;
-}
-
-/* =========================
    写真
 ========================= */
 
@@ -280,6 +244,77 @@ body{
 
     transform:
     rotate(8deg);
+}
+
+/* =========================
+   投票数
+========================= */
+
+.vote-box{
+    position:absolute;
+
+    left:50%;
+    bottom:34px;
+
+    transform:
+    translateX(-50%)
+    scale(0.82);
+
+    display:flex;
+    align-items:center;
+    gap:16px;
+
+    padding:
+    18px 34px;
+
+    background:
+    rgba(255,245,240,0.95);
+
+    border:
+    6px solid #ffc7d5;
+
+    border-radius:26px;
+
+    box-shadow:
+    0 10px 25px rgba(255,170,190,0.18);
+
+    z-index:4;
+}
+
+/* 投票数 */
+
+.vote-text{
+    font-family:'Panda';
+
+    font-size:40px;
+
+    color:#7b4b35;
+}
+
+/* 数字 */
+
+.vote-number{
+    font-family:'Panda';
+
+    font-size:72px;
+
+    line-height:1;
+
+    color:#ff9fba;
+
+    text-shadow:
+    0 4px 0 #fff,
+    0 8px 14px rgba(255,159,186,0.25);
+}
+
+/* 票 */
+
+.vote-unit{
+    font-family:'Panda';
+
+    font-size:52px;
+
+    color:#7b4b35;
 }
 
 /* =========================
@@ -377,33 +412,6 @@ body{
     right:520px;
 
     animation-delay:1.8s;
-}
-
-/* =========================
-   下ライン
-========================= */
-
-.dot-line{
-    position:absolute;
-
-    bottom:78px;
-    left:50%;
-
-    transform:translateX(-50%);
-
-    display:flex;
-    gap:18px;
-
-    z-index:2;
-}
-
-.dot{
-    width:10px;
-    height:10px;
-
-    border-radius:50%;
-
-    background:#f4a8bb;
 }
 
 /* =========================
@@ -541,24 +549,24 @@ class="photo right"
 キャバリア
 </div>
 
-<div class="vote">
-101票
 </div>
 
+<!-- 投票数 -->
+
+<div class="vote-box">
+
+<div class="vote-text">
+投票数
 </div>
 
-<!-- 下ドット -->
+<div class="vote-number">
+101
+</div>
 
-<div class="dot-line">
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
+<div class="vote-unit">
+票
+</div>
+
 </div>
 
 </div>
